@@ -29,7 +29,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Patch
-        run: ./gradlew buildAndroid -Pgpr.user=${{ github.actor }} -Pgpr.key=${{ secrets.GITHUB_TOKEN }}
+        run: ./gradlew buildAndroid -Pgpr.user=${{ github.actor }} -Pgpr.key=${{ secrets.GITHUB_TOKEN }} -PgithubPackagesUsername=${{ github.actor }} -PgithubPackagesPassword=${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload RVP Artifact
         uses: actions/upload-artifact@v4
