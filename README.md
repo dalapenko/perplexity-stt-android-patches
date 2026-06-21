@@ -4,16 +4,28 @@ A custom ReVanced patch for the Perplexity Android application that disables the
 
 ## 🚀 Usage with ReVanced Manager (Phone)
 
-You can load this patch directly in your phone's **ReVanced Manager** by setting it as a custom source:
+You can import these patches into the ReVanced Manager using one of the following methods:
 
-1. Open **ReVanced Manager** -> **Settings** -> **Sources**.
-2. Change the sources configuration:
-   * **Patches organization**: `dalapenko` *(replace with your GitHub/GitLab username)*
-   * **Patches source** (or repository): `perplexity-repatch` *(replace with your repository name)*
-3. Restart the ReVanced Manager app.
-4. Go to the **Patcher** tab and select the **Perplexity** app (compatible with version 2.90.0). The custom patch will be fetched and loaded automatically from your releases.
+### Option 1: Remote Patches Source (Recommended)
+1. Open **ReVanced Manager**.
+2. Go to **Settings** > **Sources**.
+3. Under **Patches source**, add the following URL:
+   ```text
+   https://raw.githubusercontent.com/dalapenko/perplexity-stt-android-patches/main/patches.json
+   ```
+
+### Option 2: Local Patches Bundle
+1. Go to the [Releases](https://github.com/dalapenko/perplexity-stt-android-patches/releases) page and download the latest `patches.rvp` file.
+2. In **ReVanced Manager**, go to the patcher screen and import the downloaded `.rvp` file locally.
 
 ---
+
+## Known issues
+
+1. Google authorization does not work. Login is only available via email
+2. Does not open tracks in Spotify. It only launches the app, but the specific track doesn't turn on.
+
+The problems are related to the mechanics of the ReVanced patches, which leads to signature changes
 
 ## 🛠️ Build from Source
 
